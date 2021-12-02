@@ -46,7 +46,16 @@ p{
     width: 75px;
 }
 
+.containerPerfilNavbar{
+    height: 40px;
+    width: 40px;
+}
+
 .containerImgPerfil{
     width: 150px;
     height: 150px;
+}
+
+.chatbox{
+    max-height: 600px;
 }

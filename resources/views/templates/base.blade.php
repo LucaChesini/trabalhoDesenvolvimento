@@ -30,15 +30,20 @@
                             <a class="nav-link" href="{{route('posts')}}">Posts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('perfil')}}">Perfil</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="{{route('listaContas')}}">Lista</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn btn-info" href="{{route('inserir.posts')}}">Criar Post</a>
                         </li>
                     </ul>
+                    <div class="d-flex flex-md-row flex-column align-items-md-center align-items-start gap-2">
+                        <a class="text-secondary text-decoration-none" href="{{route('conversas.lista')}}">Conversas</a>
+                        <a class="text-secondary text-decoration-none" href="{{route('perfil')}}">Perfil</a>
+                        <div>Nome</div>
+                        <div class="containerPerfilNavbar ratio ratio-1x1">
+                            <img src=" {{asset('images/perfil.png')}} " alt="Perfil" class="rounded-circle border border-1 border-dark">
+                        </div>
+                    </div>
                     <div>
                         <a role="button" href=" {{route('cadastro')}} " class="btn btn-primary">Cadastrar</a>
                         <a role="button" href=" {{route('login')}} " class="btn btn-success">Fazer Login</a>

@@ -9,24 +9,118 @@
         </div>
     </div>
 
-    <div class="overflow-auto">
-        <div class="row justify-content-start my-3">
-            <div class="col-6 bg-secondary rounded-3 py-2 px-4">
-                <p class="text-white">Mensagem Usuário 2</p>
+    <div class="row overflow-auto chatbox">
+        <div class="col">
+            <div class="row justify-content-start my-3">
+                <div class="w-75 bg-secondary rounded-3">
+                    <p class="text-white my-2 mx-4">Mensagem Usuário 2</p>
+                </div>
             </div>
-        </div>
 
-        <div class="row justify-content-end my-3">
-            <div class="col-6 bg-light rounded-3 py-2 px-4">
-                <p>Mensagem Usuário 1</p>
+            <div class="row justify-content-end my-3">
+                <div class="w-75 bg-light rounded-3">
+                    <p class="my-2 mx-4">Mensagem Usuário 1</p>
+                </div>
             </div>
-        </div>
 
-        <div class="row justify-content-start my-3">
-            <div class="col-6 bg-secondary rounded-3 py-2 px-4">
-                <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus reprehenderit nulla dolores atque modi rem voluptas sint animi molestiae quas exercitationem natus consectetur maiores, repellendus dicta repellat laborum minus. Obcaecati!</p>
+            <div class="row justify-content-start my-3">
+                <div class="w-75 bg-secondary rounded-3">
+                    <p class="text-white my-2 mx-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus reprehenderit nulla dolores atque modi rem voluptas sint animi molestiae quas exercitationem natus consectetur maiores, repellendus dicta repellat laborum minus. Obcaecati!</p>
+                </div>
+            </div>
+            <div class="row justify-content-start my-3">
+                <div class="w-75 bg-secondary rounded-3">
+                    <p class="text-white my-2 mx-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus reprehenderit nulla dolores atque modi rem voluptas sint animi molestiae quas exercitationem natus consectetur maiores, repellendus dicta repellat laborum minus. Obcaecati!</p>
+                </div>
+            </div>
+            <div class="row justify-content-start my-3">
+                <div class="w-75 bg-secondary rounded-3">
+                    <p class="text-white my-2 mx-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus reprehenderit nulla dolores atque modi rem voluptas sint animi molestiae quas exercitationem natus consectetur maiores, repellendus dicta repellat laborum minus. Obcaecati!</p>
+                </div>
+            </div>
+            <div class="row justify-content-start my-3">
+                <div class="w-75 bg-secondary rounded-3">
+                    <p class="text-white my-2 mx-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus reprehenderit nulla dolores atque modi rem voluptas sint animi molestiae quas exercitationem natus consectetur maiores, repellendus dicta repellat laborum minus. Obcaecati!</p>
+                </div>
+            </div>
+            <div class="row justify-content-start my-3">
+                <div class="w-75 bg-secondary rounded-3">
+                    <p class="text-white my-2 mx-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus reprehenderit nulla dolores atque modi rem voluptas sint animi molestiae quas exercitationem natus consectetur maiores, repellendus dicta repellat laborum minus. Obcaecati!</p>
+                </div>
+            </div>
+            <div class="row justify-content-start my-3">
+                <div class="w-75 bg-secondary rounded-3">
+                    <p class="text-white my-2 mx-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus reprehenderit nulla dolores atque modi rem voluptas sint animi molestiae quas exercitationem natus consectetur maiores, repellendus dicta repellat laborum minus. Obcaecati!</p>
+                </div>
+            </div>
+            <div class="row justify-content-start my-3">
+                <div class="w-75 bg-secondary rounded-3">
+                    <p class="text-white my-2 mx-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus reprehenderit nulla dolores atque modi rem voluptas sint animi molestiae quas exercitationem natus consectetur maiores, repellendus dicta repellat laborum minus. Obcaecati!</p>
+                </div>
+            </div>
+            <div class="row justify-content-start my-3">
+                <div class="w-75 bg-secondary rounded-3">
+                    <p class="text-white my-2 mx-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus reprehenderit nulla dolores atque modi rem voluptas sint animi molestiae quas exercitationem natus consectetur maiores, repellendus dicta repellat laborum minus. Obcaecati!</p>
+                </div>
+            </div>
+            <div class="row justify-content-start my-3">
+                <div class="w-75 bg-secondary rounded-3">
+                    <p class="text-white my-2 mx-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus reprehenderit nulla dolores atque modi rem voluptas sint animi molestiae quas exercitationem natus consectetur maiores, repellendus dicta repellat laborum minus. Obcaecati!</p>
+                </div>
+            </div>
+            <div class="row justify-content-start my-3">
+                <div class="w-75 bg-secondary rounded-3">
+                    <p class="text-white my-2 mx-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus reprehenderit nulla dolores atque modi rem voluptas sint animi molestiae quas exercitationem natus consectetur maiores, repellendus dicta repellat laborum minus. Obcaecati!</p>
+                </div>
+            </div>
+            <div class="row justify-content-start my-3">
+                <div class="w-75 bg-secondary rounded-3">
+                    <p class="text-white my-2 mx-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus reprehenderit nulla dolores atque modi rem voluptas sint animi molestiae quas exercitationem natus consectetur maiores, repellendus dicta repellat laborum minus. Obcaecati!</p>
+                </div>
+            </div>
+            <div class="row justify-content-start my-3">
+                <div class="w-75 bg-secondary rounded-3">
+                    <p class="text-white my-2 mx-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus reprehenderit nulla dolores atque modi rem voluptas sint animi molestiae quas exercitationem natus consectetur maiores, repellendus dicta repellat laborum minus. Obcaecati!</p>
+                </div>
+            </div>
+            <div class="row justify-content-start my-3">
+                <div class="w-75 bg-secondary rounded-3">
+                    <p class="text-white my-2 mx-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus reprehenderit nulla dolores atque modi rem voluptas sint animi molestiae quas exercitationem natus consectetur maiores, repellendus dicta repellat laborum minus. Obcaecati!</p>
+                </div>
+            </div>
+            <div class="row justify-content-start my-3">
+                <div class="w-75 bg-secondary rounded-3">
+                    <p class="text-white my-2 mx-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus reprehenderit nulla dolores atque modi rem voluptas sint animi molestiae quas exercitationem natus consectetur maiores, repellendus dicta repellat laborum minus. Obcaecati!</p>
+                </div>
+            </div>
+            <div class="row justify-content-start my-3">
+                <div class="w-75 bg-secondary rounded-3">
+                    <p class="text-white my-2 mx-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus reprehenderit nulla dolores atque modi rem voluptas sint animi molestiae quas exercitationem natus consectetur maiores, repellendus dicta repellat laborum minus. Obcaecati!</p>
+                </div>
+            </div>
+            <div class="row justify-content-start my-3">
+                <div class="w-75 bg-secondary rounded-3">
+                    <p class="text-white my-2 mx-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus reprehenderit nulla dolores atque modi rem voluptas sint animi molestiae quas exercitationem natus consectetur maiores, repellendus dicta repellat laborum minus. Obcaecati!</p>
+                </div>
+            </div>
+            <div class="row justify-content-start my-3">
+                <div class="w-75 bg-secondary rounded-3">
+                    <p class="text-white my-2 mx-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus reprehenderit nulla dolores atque modi rem voluptas sint animi molestiae quas exercitationem natus consectetur maiores, repellendus dicta repellat laborum minus. Obcaecati!</p>
+                </div>
+            </div>
+            <div class="row justify-content-start my-3">
+                <div class="w-75 bg-secondary rounded-3">
+                    <p class="text-white my-2 mx-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus reprehenderit nulla dolores atque modi rem voluptas sint animi molestiae quas exercitationem natus consectetur maiores, repellendus dicta repellat laborum minus. Obcaecati!</p>
+                </div>
             </div>
         </div>
+    </div>
+
+    <div class="row">
+        <form action="#" method="POST" class="mt-1 d-flex flex-row justify-content-center">
+            <textarea name="mensagem" id="mensagem" rows="1" class="w-100"></textarea>
+            <button class="btn btn-success" type="submit">Enviar</button>
+        </form>
     </div>
 
 @endsection

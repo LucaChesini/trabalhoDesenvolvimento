@@ -71,9 +71,7 @@
     <div class="row">
         <div class="col-1"></div>
         <div class="col">
-            <form action="#" method="POST">
-                <button type="submit" id="curtir" name="curtir" class="btn"><i class="bi bi-hand-thumbs-up"></i></button>
-            </form>
+            <button type="submit" id="curtir" name="curtir" class="btn"><i class="bi bi-hand-thumbs-up"></i><span>100</span></button>
         </div>
         <div class="col-1"></div>
     </div>
@@ -158,28 +156,32 @@
                 </div>
                 <div>
                     <div class="mb-0 mt-3 ms-5">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis quos ducimus distinctio, voluptatem libero impedit atque excepturi optio facere recusandae tempore, at delectus quas hic fugit veniam fugiat amet labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi autem sint ipsum quaerat repellendus ipsa assumenda laboriosam magnam nostrum doloribus optio excepturi maxime velit ad sunt corrupti, laborum rerum cumque!</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis quos ducimus distinctio, voluptatem libero impedit atque excepturi optio facere recusandae tempore, at delectus quas hic fugit veniam fugiat amet labore.</p>
                     </div>
                 </div>
-                <div class="d-md-none">
+                <div>
+                    <button type="submit" id="curtir" name="curtir" class="btn"><i class="bi bi-hand-thumbs-up"></i><span>100</span></button>
+                </div>
+                <div>
                     <button class="btn btn-danger">Apagar</button>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="d-flex flex-row align-items-center">
-                <div class="d-flex flex-column justify-content-start p-2">
-                    <div class="d-flex flex-row justify-content-start align-items-center border-bottom pb-1">
-                        <div class="containerPerfilComentario ratio ratio-1x1">
-                            <img src=" {{asset('images/perfil2.png')}} " alt="Perfil" class="rounded-circle border border-1 border-dark">
-                        </div>
-                        <div class="my-0 ms-3">Nome</div>
+            <div class="d-flex flex-column justify-content-start p-2">
+                <div class="d-flex flex-row justify-content-start align-items-center border-bottom pb-1">
+                    <div class="containerPerfilComentario ratio ratio-1x1">
+                        <img src=" {{asset('images/perfil2.png')}} " alt="Perfil" class="rounded-circle border border-1 border-dark">
                     </div>
-                    <div>
-                        <div class="mb-0 mt-3 ms-5">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis quos ducimus distinctio, voluptatem libero impedit atque excepturi optio facere recusandae tempore, at delectus quas hic fugit veniam fugiat amet labore.</p>
-                        </div>
+                    <div class="my-0 ms-3">Nome</div>
+                </div>
+                <div>
+                    <div class="mb-0 mt-3 ms-5">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis quos ducimus distinctio, voluptatem libero impedit atque excepturi optio facere recusandae tempore, at delectus quas hic fugit veniam fugiat amet labore.</p>
                     </div>
+                </div>
+                <div>
+                    <button type="submit" id="curtir" name="curtir" class="btn"><i class="bi bi-hand-thumbs-up"></i><span>100</span></button>
                 </div>
                 <div>
                     <button class="btn btn-danger">Apagar</button>
@@ -198,6 +200,30 @@
                     <div class="mb-0 mt-3 ms-5">
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis quos ducimus distinctio, voluptatem libero impedit atque excepturi optio facere recusandae tempore, at delectus quas hic fugit veniam fugiat amet labore.</p>
                     </div>
+                </div>
+                <div>
+                    <button type="submit" id="curtir" name="curtir" class="btn"><i class="bi bi-hand-thumbs-up"></i><span>100</span></button>
+                </div>
+                <div>
+                    <button class="btn btn-danger">Apagar</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="d-flex flex-column justify-content-start p-2">
+                <div class="d-flex flex-row justify-content-start align-items-center border-bottom pb-1">
+                    <div class="containerPerfilComentario ratio ratio-1x1">
+                        <img src=" {{asset('images/perfil.png')}} " alt="Perfil" class="rounded-circle border border-1 border-dark">
+                    </div>
+                    <div class="my-0 ms-3">Nome</div>
+                </div>
+                <div>
+                    <div class="mb-0 mt-3 ms-5">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis quos ducimus distinctio, voluptatem libero impedit atque excepturi optio facere recusandae tempore, at delectus quas hic fugit veniam fugiat amet labore.</p>
+                    </div>
+                </div>
+                <div>
+                    <button type="submit" id="curtir" name="curtir" class="btn"><i class="bi bi-hand-thumbs-up"></i><span>100</span></button>
                 </div>
                 <div>
                     <button class="btn btn-danger">Apagar</button>
