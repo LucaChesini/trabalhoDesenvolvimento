@@ -1,5 +1,5 @@
 @extends('templates.base')
-@section('titulo', 'Página Inicial')
+@section('titulo', 'Escrever Posts')
 
 @section('corpo')
 
