@@ -35,7 +35,7 @@ Route::get('/cadastro', function () {
 
 Route::get('/perfil/editar', function () {
     return view('usuarios.editarPerfil');
-})->name('perfilEditar');
+})->name('perfil.editar');
 
 Route::get('/perfil', function () {
     return view('usuarios.perfil');
@@ -43,7 +43,7 @@ Route::get('/perfil', function () {
 
 Route::get('/perfil/curtidas', function () {
     return view('usuarios.perfilCurtidas');
-})->name('perfilCurtidas');
+})->name('perfil.curtidas');
 
 Route::get('/posts/inserir', function () {
     return view('posts.create');

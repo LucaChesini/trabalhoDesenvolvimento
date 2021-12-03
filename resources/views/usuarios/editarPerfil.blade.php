@@ -12,7 +12,7 @@
     <body>
         <div class="containerForm h-100 d-flex justify-content-center align-items-center">
             <div class="form border border-2 py-4 px-sm-4 px-1 rounded-3">
-                <h1 class="mb-3">Fazer Cadastro</h1>
+                <h1 class="mb-3">Editar Perfil</h1>
                 <form action="#" method="POST" enctype="multipart/form-data">
                     <label for="email" class="form-label">Email:</label>
                     <input type="email" name="email" id="email" class="form-control mb-3">
@@ -30,7 +30,7 @@
                     </div>
                     <div class="d-flex flex-row justify-content-around flex-wrap">
                         <button type="submit" class="btn btn-success mx-auto">Enviar</button>
-                        <a href="#" role="button" class="btn btn-danger mx-auto">Voltar</a>
+                        <a href="{{route('perfil')}}" role="button" class="btn btn-danger mx-auto">Voltar</a>
                     </div>
                 </form>
             </div>

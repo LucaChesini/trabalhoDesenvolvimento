@@ -2,11 +2,14 @@
 @section('titulo', 'Página Inicial')
 
 @section('corpo')
-
+    {{-- TÍTULO PRINCIPAL --}}
     <div class="row">
-        <h1 class="text-center mt-2">A Taverna</h1>
+        <div class="col">
+            <h1 class="text-center mt-2">A Taverna</h1>
+        </div>
     </div>
 
+    {{-- POST PRINCIPAL --}}
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8 col">
@@ -21,6 +24,7 @@
         <div class="col-md-2"></div>
     </div>
 
+    {{-- DOIS POSTS MAIS RECENTES --}}
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-4 col-6">
@@ -43,9 +47,12 @@
     </div>
 
     <div class="row">
-        <h2>Todos os posts:</h2>
+        <div class="col">
+            <h2>Todos os posts:</h2>
+        </div>
     </div>
 
+    {{-- LISTAGEM COM VÁRIOS POSTS RECENTES --}}
     <div class="intercalar">
         <div class="row">
             <div class="col-md-3 col-5">
@@ -60,6 +67,7 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-3 col-5">
                 <div class="containerImgPrincipal ratio ratio-16x9">
@@ -73,6 +81,7 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-3 col-5">
                 <div class="containerImgPrincipal ratio ratio-16x9">
@@ -86,6 +95,7 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-3 col-5">
                 <div class="containerImgPrincipal ratio ratio-16x9">
@@ -99,6 +109,7 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-3 col-5">
                 <div class="containerImgPrincipal ratio ratio-16x9">
@@ -112,6 +123,7 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-3 col-5">
                 <div class="containerImgPrincipal ratio ratio-16x9">
@@ -126,8 +138,12 @@
             </div>
         </div>
     </div>
-    <div class="row">  
-        <a href=" {{route('posts')}} " class="link-primary">Mais posts</a>
+
+    {{-- LINK PARA A PÁGINA COM TODOS OS POSTS --}}
+    <div class="row">
+        <div class="col">  
+            <a href=" {{route('posts')}} " class="link-primary">Mais posts</a>
+        </div>
     </div>
 
 @endsection

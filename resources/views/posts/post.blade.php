@@ -24,6 +24,7 @@
         <div class="col-md-1"></div>
     </div>
 
+    {{-- BOTÕES DE GERENCIAMENTO PARA ADMINISTRADOR --}}
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col">
@@ -144,89 +145,124 @@
         <div class="col-md-1"></div>
     </div>
 
-    {{-- COMENTÁRIOS --}}
+    {{-- LISTAGEM DE COMENTÁRIOS --}}
     <div class="intercalar my-3">
         <div class="row">
-            <div class="d-flex flex-column justify-content-start p-2">
-                <div class="d-flex flex-row justify-content-start align-items-center border-bottom pb-1">
-                    <div class="containerPerfilComentario ratio ratio-1x1">
-                        <img src=" {{asset('images/perfil.png')}} " alt="Perfil" class="rounded-circle border border-1 border-dark">
+            <div class="col">
+                <div class="d-flex flex-column justify-content-start p-2">
+                    <div class="d-flex flex-row justify-content-start align-items-center border-bottom pb-1">
+                        <div class="containerPerfilComentario ratio ratio-1x1">
+                            <img src=" {{asset('images/perfil.png')}} " alt="Perfil" class="rounded-circle border border-1 border-dark">
+                        </div>
+                        <div class="my-0 ms-3">Nome</div>
                     </div>
-                    <div class="my-0 ms-3">Nome</div>
-                </div>
-                <div>
-                    <div class="mb-0 mt-3 ms-5">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis quos ducimus distinctio, voluptatem libero impedit atque excepturi optio facere recusandae tempore, at delectus quas hic fugit veniam fugiat amet labore.</p>
+                    <div>
+                        <div class="mb-0 mt-3 ms-5">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis quos ducimus distinctio, voluptatem libero impedit atque excepturi optio facere recusandae tempore, at delectus quas hic fugit veniam fugiat amet labore.</p>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <button type="submit" id="curtir" name="curtir" class="btn"><i class="bi bi-hand-thumbs-up"></i><span>100</span></button>
-                </div>
-                <div>
-                    <button class="btn btn-danger">Apagar</button>
+                    <div>
+                        <button type="submit" id="curtir" name="curtir" class="btn"><i class="bi bi-hand-thumbs-up"></i><span>100</span></button>
+                    </div>
+                    <div>
+                        <button class="btn btn-danger">Apagar</button>
+                    </div>
                 </div>
             </div>
         </div>
+
         <div class="row">
-            <div class="d-flex flex-column justify-content-start p-2">
-                <div class="d-flex flex-row justify-content-start align-items-center border-bottom pb-1">
-                    <div class="containerPerfilComentario ratio ratio-1x1">
-                        <img src=" {{asset('images/perfil2.png')}} " alt="Perfil" class="rounded-circle border border-1 border-dark">
+            <div class="col">
+                <div class="d-flex flex-column justify-content-start p-2">
+                    <div class="d-flex flex-row justify-content-start align-items-center border-bottom pb-1">
+                        <div class="containerPerfilComentario ratio ratio-1x1">
+                            <img src=" {{asset('images/perfil.png')}} " alt="Perfil" class="rounded-circle border border-1 border-dark">
+                        </div>
+                        <div class="my-0 ms-3">Nome</div>
                     </div>
-                    <div class="my-0 ms-3">Nome</div>
-                </div>
-                <div>
-                    <div class="mb-0 mt-3 ms-5">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis quos ducimus distinctio, voluptatem libero impedit atque excepturi optio facere recusandae tempore, at delectus quas hic fugit veniam fugiat amet labore.</p>
+                    <div>
+                        <div class="mb-0 mt-3 ms-5">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis quos ducimus distinctio, voluptatem libero impedit atque excepturi optio facere recusandae tempore, at delectus quas hic fugit veniam fugiat amet labore.</p>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <button type="submit" id="curtir" name="curtir" class="btn"><i class="bi bi-hand-thumbs-up"></i><span>100</span></button>
-                </div>
-                <div>
-                    <button class="btn btn-danger">Apagar</button>
+                    <div>
+                        <button type="submit" id="curtir" name="curtir" class="btn"><i class="bi bi-hand-thumbs-up"></i><span>100</span></button>
+                    </div>
+                    <div>
+                        <button class="btn btn-danger">Apagar</button>
+                    </div>
                 </div>
             </div>
         </div>
+
         <div class="row">
-            <div class="d-flex flex-column justify-content-start p-2">
-                <div class="d-flex flex-row justify-content-start align-items-center border-bottom pb-1">
-                    <div class="containerPerfilComentario ratio ratio-1x1">
-                        <img src=" {{asset('images/perfil.png')}} " alt="Perfil" class="rounded-circle border border-1 border-dark">
+            <div class="col">
+                <div class="d-flex flex-column justify-content-start p-2">
+                    <div class="d-flex flex-row justify-content-start align-items-center border-bottom pb-1">
+                        <div class="containerPerfilComentario ratio ratio-1x1">
+                            <img src=" {{asset('images/perfil.png')}} " alt="Perfil" class="rounded-circle border border-1 border-dark">
+                        </div>
+                        <div class="my-0 ms-3">Nome</div>
                     </div>
-                    <div class="my-0 ms-3">Nome</div>
-                </div>
-                <div>
-                    <div class="mb-0 mt-3 ms-5">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis quos ducimus distinctio, voluptatem libero impedit atque excepturi optio facere recusandae tempore, at delectus quas hic fugit veniam fugiat amet labore.</p>
+                    <div>
+                        <div class="mb-0 mt-3 ms-5">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis quos ducimus distinctio, voluptatem libero impedit atque excepturi optio facere recusandae tempore, at delectus quas hic fugit veniam fugiat amet labore.</p>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <button type="submit" id="curtir" name="curtir" class="btn"><i class="bi bi-hand-thumbs-up"></i><span>100</span></button>
-                </div>
-                <div>
-                    <button class="btn btn-danger">Apagar</button>
+                    <div>
+                        <button type="submit" id="curtir" name="curtir" class="btn"><i class="bi bi-hand-thumbs-up"></i><span>100</span></button>
+                    </div>
+                    <div>
+                        <button class="btn btn-danger">Apagar</button>
+                    </div>
                 </div>
             </div>
         </div>
+
         <div class="row">
-            <div class="d-flex flex-column justify-content-start p-2">
-                <div class="d-flex flex-row justify-content-start align-items-center border-bottom pb-1">
-                    <div class="containerPerfilComentario ratio ratio-1x1">
-                        <img src=" {{asset('images/perfil.png')}} " alt="Perfil" class="rounded-circle border border-1 border-dark">
+            <div class="col">
+                <div class="d-flex flex-column justify-content-start p-2">
+                    <div class="d-flex flex-row justify-content-start align-items-center border-bottom pb-1">
+                        <div class="containerPerfilComentario ratio ratio-1x1">
+                            <img src=" {{asset('images/perfil2.png')}} " alt="Perfil" class="rounded-circle border border-1 border-dark">
+                        </div>
+                        <div class="my-0 ms-3">Nome</div>
                     </div>
-                    <div class="my-0 ms-3">Nome</div>
-                </div>
-                <div>
-                    <div class="mb-0 mt-3 ms-5">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis quos ducimus distinctio, voluptatem libero impedit atque excepturi optio facere recusandae tempore, at delectus quas hic fugit veniam fugiat amet labore.</p>
+                    <div>
+                        <div class="mb-0 mt-3 ms-5">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis quos ducimus distinctio, voluptatem libero impedit atque excepturi optio facere recusandae tempore, at delectus quas hic fugit veniam fugiat amet labore.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="submit" id="curtir" name="curtir" class="btn"><i class="bi bi-hand-thumbs-up"></i><span>100</span></button>
+                    </div>
+                    <div>
+                        <button class="btn btn-danger">Apagar</button>
                     </div>
                 </div>
-                <div>
-                    <button type="submit" id="curtir" name="curtir" class="btn"><i class="bi bi-hand-thumbs-up"></i><span>100</span></button>
-                </div>
-                <div>
-                    <button class="btn btn-danger">Apagar</button>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col">
+                <div class="d-flex flex-column justify-content-start p-2">
+                    <div class="d-flex flex-row justify-content-start align-items-center border-bottom pb-1">
+                        <div class="containerPerfilComentario ratio ratio-1x1">
+                            <img src=" {{asset('images/perfil.png')}} " alt="Perfil" class="rounded-circle border border-1 border-dark">
+                        </div>
+                        <div class="my-0 ms-3">Nome</div>
+                    </div>
+                    <div>
+                        <div class="mb-0 mt-3 ms-5">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis quos ducimus distinctio, voluptatem libero impedit atque excepturi optio facere recusandae tempore, at delectus quas hic fugit veniam fugiat amet labore.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="submit" id="curtir" name="curtir" class="btn"><i class="bi bi-hand-thumbs-up"></i><span>100</span></button>
+                    </div>
+                    <div>
+                        <button class="btn btn-danger">Apagar</button>
+                    </div>
                 </div>
             </div>
         </div>

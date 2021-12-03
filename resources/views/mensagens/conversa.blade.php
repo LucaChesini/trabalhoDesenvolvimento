@@ -4,11 +4,14 @@
 @section('corpo')
 
     <div class="row">
-        <div class="bg-light">
-            <p class="p-2">NOME</p>
+        <div class="col">
+            <div class="bg-light">
+                <p class="p-2">NOME</p>
+            </div>
         </div>
     </div>
 
+    {{-- CAIXA DE CHAT, COM TODAS AS MENSAGENS --}}
     <div class="row overflow-auto chatbox">
         <div class="col">
             <div class="row justify-content-start my-3">
@@ -116,11 +119,14 @@
         </div>
     </div>
 
+    {{-- ESCRITA DE MENSAGENS --}}
     <div class="row">
-        <form action="#" method="POST" class="mt-1 d-flex flex-row justify-content-center">
-            <textarea name="mensagem" id="mensagem" rows="1" class="w-100"></textarea>
-            <button class="btn btn-success" type="submit">Enviar</button>
-        </form>
+        <div class="col">
+            <form action="#" method="POST" class="mt-1 d-flex flex-row justify-content-center">
+                <textarea name="mensagem" id="mensagem" rows="1" class="w-100"></textarea>
+                <button class="btn btn-success" type="submit">Enviar</button>
+            </form>
+        </div>
     </div>
 
 @endsection

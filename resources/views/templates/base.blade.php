@@ -18,6 +18,8 @@
         <title>@yield('titulo')</title>
     </head>
     <body>
+
+        {{-- NAVBAR --}}
         <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-warning bg-opacity-50">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{{route('index')}}">A Taverna</a>
@@ -25,10 +27,13 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="itensNavbar">
+                    {{-- LISTA DE LINKS --}}
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('posts')}}">Posts</a>
                         </li>
+
+                        {{-- Só para administradores --}}
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('listaContas')}}">Lista</a>
                         </li>
@@ -36,14 +41,22 @@
                             <a class="nav-link btn btn-info" href="{{route('inserir.posts')}}">Criar Post</a>
                         </li>
                     </ul>
-                    <div class="d-flex flex-md-row flex-column align-items-md-center align-items-start gap-2">
+
+                    {{-- Apenas quando o usuário estiver logado --}}
+                    <div class="d-flex flex-lg-row flex-column align-items-lg-center align-items-start gap-2">
                         <a class="text-secondary text-decoration-none" href="{{route('conversas.lista')}}">Conversas</a>
                         <a class="text-secondary text-decoration-none" href="{{route('perfil')}}">Perfil</a>
-                        <div>Nome</div>
-                        <div class="containerPerfilNavbar ratio ratio-1x1">
-                            <img src=" {{asset('images/perfil.png')}} " alt="Perfil" class="rounded-circle border border-1 border-dark">
+                        <a class="text-danger text-decoration-none" href="#">Sair</a>
+                        <div class="vr d-lg-block d-none"></div>
+                        <div class="d-flex flex-lg-row flex-row-reverse align-items-center gap-2">
+                            <div>Nome</div>
+                            <div class="containerPerfilNavbar ratio ratio-1x1">
+                                <img src=" {{asset('images/perfil.png')}} " alt="Perfil" class="rounded-circle border border-1 border-dark">
+                            </div>
                         </div>
                     </div>
+
+                    {{-- Apenas quando o usuário não estiver logado --}}
                     <div>
                         <a role="button" href=" {{route('cadastro')}} " class="btn btn-primary">Cadastrar</a>
                         <a role="button" href=" {{route('login')}} " class="btn btn-success">Fazer Login</a>
@@ -52,6 +65,7 @@
             </div>
         </nav>
 
+        {{-- CORPO DO SITE --}}
         <div class="container">
             @yield('corpo')
         </div>

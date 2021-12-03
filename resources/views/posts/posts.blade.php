@@ -4,7 +4,9 @@
 @section('corpo')
 
     <div class="row my-3">
-        <h2>Todos os posts:</h2>
+        <div class="col">
+            <h2>Todos os posts:</h2>
+        </div>
     </div>
 
     {{-- BARRA DE PESQUISA --}}
@@ -19,7 +21,7 @@
         <div class="col-sm-2"></div>
     </div>
 
-    {{-- POSTS --}}
+    {{-- LISTAGEM DE POSTS --}}
     <div class="intercalar">
         <div class="row">
             <div class="col-md-3 col-5">
@@ -34,6 +36,7 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-3 col-5">
                 <div class="containerImgPrincipal ratio ratio-16x9">
@@ -47,6 +50,7 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-3 col-5">
                 <div class="containerImgPrincipal ratio ratio-16x9">
@@ -60,6 +64,7 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-3 col-5">
                 <div class="containerImgPrincipal ratio ratio-16x9">
@@ -73,6 +78,7 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-3 col-5">
                 <div class="containerImgPrincipal ratio ratio-16x9">
@@ -86,6 +92,7 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-3 col-5">
                 <div class="containerImgPrincipal ratio ratio-16x9">
@@ -99,6 +106,7 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-3 col-5">
                 <div class="containerImgPrincipal ratio ratio-16x9">
@@ -112,6 +120,7 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-3 col-5">
                 <div class="containerImgPrincipal ratio ratio-16x9">
@@ -125,6 +134,7 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-3 col-5">
                 <div class="containerImgPrincipal ratio ratio-16x9">
@@ -138,6 +148,7 @@
                 </div>
             </div>
         </div>
+        
         <div class="row">
             <div class="col-md-3 col-5">
                 <div class="containerImgPrincipal ratio ratio-16x9">
@@ -155,24 +166,26 @@
 
     {{-- PAGINAÇÃO --}}
     <div class="row">
-        <div class="d-flex flex-row justify-content-center">
-            <ul class="pagination">
-                <li class="page-item">
-                    <a class="page-link" href="#">Previous</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">1</a>
-                </li>
-                <li class="page-item active" aria-current="page">
-                    <a class="page-link" href="#">2</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">3</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">Next</a>
-                </li>
-            </ul>
+        <div class="col">
+            <div class="d-flex flex-row justify-content-center">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#">Previous</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
