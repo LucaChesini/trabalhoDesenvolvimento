@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,17 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('posts.index');
-})->name('index');
+Route::get('/', [PostsController::class, 'index'])->name('index');
 
-Route::get('/posts', function () {
-    return view('posts.posts');
-})->name('posts');
+Route::get('/posts', [PostsController::class, 'posts'])->name('posts');
 
-Route::get('/post', function () {
-    return view('posts.post');
-})->name('post');
+Route::get('/posts/inserir', [PostsController::class, 'create'])->name('posts.inserir');
+
+Route::post('/posts/inserir', [PostsController::class, 'insert'])->name('posts.gravar');
+
+Route::get('/posts/{post}', [PostsController::class, 'show'])->name('posts.post');
+
+
 
 Route::get('/login', function () {
     return view('usuarios.login');
@@ -44,10 +45,6 @@ Route::get('/perfil', function () {
 Route::get('/perfil/curtidas', function () {
     return view('usuarios.perfilCurtidas');
 })->name('perfil.curtidas');
-
-Route::get('/posts/inserir', function () {
-    return view('posts.create');
-})->name('inserir.posts');
 
 Route::get('/lista', function () {
     return view('usuarios.contas');

@@ -11,22 +11,23 @@
 
     <div class="row">
         <div class="col">
-            <form action="#" method="POST" enctype="multipart/form-data">
+            <form action="{{route('posts.gravar')}}" method="POST" enctype="multipart/form-data">
+                @csrf
                 <div class="mb-3">
                     <label for="titulo" class="form-label">Titulo:</label>
-                    <input type="text" class="form-control" id="titulo">
+                    <input type="text" class="form-control" id="titulo" name="titulo">
                 </div>
                 <div class="mb-3">
                     <label for="subtitulo" class="form-label">Subtitulo:</label>
-                    <input type="text" class="form-control" id="subtitulo">
+                    <input type="text" class="form-control" id="subtitulo" name="subtitulo">
                 </div>
                 <div class="mb-3">
                     <label for="capa" class="form-label">Imagem de capa:</label>
-                    <input type="file" class="form-control" id="capa">
+                    <input type="file" class="form-control" id="capa" name="capa">
                 </div>
                 <div class="mb-3">
                     <label for="corpo" class="form-label">Corpo:</label>
-                    <textarea class="form-control tinymce" id="corpo" rows="20"></textarea>
+                    <textarea class="form-control tinymce" id="corpo" rows="20" name="corpo"></textarea>
                 </div>
                 <div class="mb-3">
                     <button type="submit" class="btn btn-success">Enviar</button>

@@ -7,11 +7,11 @@
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col">
-            <h1 class="ps-0">Título</h1>
+            <h1 class="ps-0">{{$post->titulo}}</h1>
             <div class="containerImgPrincipal ratio ratio-16x9">
-                <img src=" {{asset('images/teste.png')}} " alt="Imagem Postagem" class="h-100 w-100 postPrincipal">
+                <img src=" {{asset('capas/'.$post->capa)}} " alt="Imagem Postagem" class="h-100 w-100 postPrincipal">
             </div>
-            <p class="ps-0">Subtítulo</p>
+            <p class="ps-0">{{$post->subtitulo}}</p>
         </div>
         <div class="col-md-1"></div>
     </div>
@@ -29,7 +29,7 @@
         <div class="col-md-1"></div>
         <div class="col">
             <div class="d-flex flex-row justify-content-around my-3">
-                <a role="button" href=" {{route('inserir.posts')}} " class="btn btn-success">Editar</a>
+                <a role="button" href=" {{route('posts.inserir')}} " class="btn btn-success">Editar</a>
                 <a role="button" href=" {{route('excluir')}} " class="btn btn-danger">Apagar</a>
             </div>
         </div>
@@ -48,6 +48,7 @@
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col">
+            {{-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, incidunt suscipit. Esse nulla sapiente ratione a odio dolorum tempore accusantium. Iste veniam voluptatem odio porro fugit facere assumenda, id in.</p>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, incidunt suscipit. Esse nulla sapiente ratione a odio dolorum tempore accusantium. Iste veniam voluptatem odio porro fugit facere assumenda, id in.</p>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, incidunt suscipit. Esse nulla sapiente ratione a odio dolorum tempore accusantium. Iste veniam voluptatem odio porro fugit facere assumenda, id in.</p>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, incidunt suscipit. Esse nulla sapiente ratione a odio dolorum tempore accusantium. Iste veniam voluptatem odio porro fugit facere assumenda, id in.</p>
@@ -62,8 +63,8 @@
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, incidunt suscipit. Esse nulla sapiente ratione a odio dolorum tempore accusantium. Iste veniam voluptatem odio porro fugit facere assumenda, id in.</p>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, incidunt suscipit. Esse nulla sapiente ratione a odio dolorum tempore accusantium. Iste veniam voluptatem odio porro fugit facere assumenda, id in.</p>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, incidunt suscipit. Esse nulla sapiente ratione a odio dolorum tempore accusantium. Iste veniam voluptatem odio porro fugit facere assumenda, id in.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, incidunt suscipit. Esse nulla sapiente ratione a odio dolorum tempore accusantium. Iste veniam voluptatem odio porro fugit facere assumenda, id in.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, incidunt suscipit. Esse nulla sapiente ratione a odio dolorum tempore accusantium. Iste veniam voluptatem odio porro fugit facere assumenda, id in.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, incidunt suscipit. Esse nulla sapiente ratione a odio dolorum tempore accusantium. Iste veniam voluptatem odio porro fugit facere assumenda, id in.</p> --}}
+            {!! $post->corpo !!}
         </div>
         <div class="col-md-1"></div>
     </div>

@@ -38,7 +38,7 @@
                             <a class="nav-link" href="{{route('listaContas')}}">Lista</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-info" href="{{route('inserir.posts')}}">Criar Post</a>
+                            <a class="nav-link btn btn-info" href="{{route('posts.inserir')}}">Criar Post</a>
                         </li>
                     </ul>
 
