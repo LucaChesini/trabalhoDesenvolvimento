@@ -24,6 +24,14 @@ Route::post('/posts/inserir', [PostsController::class, 'insert'])->name('posts.g
 
 Route::get('/posts/{post}', [PostsController::class, 'show'])->name('posts.post');
 
+Route::get('/posts/{post}/editar', [PostsController::class, 'edit'])->name('posts.edit');
+
+Route::post('/posts/{post}/editar', [PostsController::class, 'update'])->name('posts.update');
+
+Route::get('/posts/{post}/deletar', [PostsController::class, 'delete'])->name('posts.delete');
+
+Route::post('/posts/{post}/deletar', [PostsController::class, 'remove'])->name('posts.remove');
+
 
 
 Route::get('/login', function () {

@@ -29,8 +29,8 @@
         <div class="col-md-1"></div>
         <div class="col">
             <div class="d-flex flex-row justify-content-around my-3">
-                <a role="button" href=" {{route('posts.inserir')}} " class="btn btn-success">Editar</a>
-                <a role="button" href=" {{route('excluir')}} " class="btn btn-danger">Apagar</a>
+                <a role="button" href=" {{route('posts.edit', $post)}} " class="btn btn-success">Editar</a>
+                <a role="button" href=" {{route('posts.delete', $post)}} " class="btn btn-danger">Apagar</a>
             </div>
         </div>
         <div class="col-md-1"></div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class PostsController extends Controller
@@ -15,7 +16,9 @@ class PostsController extends Controller
     }
 
     public function posts(){
-        return view('posts.posts');
+        $posts = Post::orderBy('id', 'desc')->get();
+
+        return view('posts.posts', ['posts' => $posts]);
     }
 
     public function show(Post $post){
@@ -40,6 +43,41 @@ class PostsController extends Controller
         $post->id_usuario = 1;
 
         $post->save();
+
+        return redirect()->route('index');
+    }
+
+    public function edit(Post $post){
+        return view('posts.edit', ['post' => $post]);
+    }
+
+    public function update(Request $form, Post $post){
+        if(isset($form->capa)){
+            Storage::disk('capas')->delete($post->capa);
+            $capaCaminho = $form->file('capa')->store('', 'capas');
+            $post->capa = $capaCaminho;
+        }
+
+        $slug = Str::of($form->titulo)->slug('-');
+
+        $post->titulo = $form->titulo;
+        $post->subtitulo = $form->subtitulo;
+        $post->slug = $slug;
+        $post->corpo = $form->corpo;
+        $post->id_usuario = 1;
+
+        $post->save();
+
+        return redirect()->route('index');
+    }
+
+    public function delete(Post $post){
+        return view('posts.delete', ['post' => $post]);
+    }
+
+    public function remove(Post $post){
+        Storage::disk('capas')->delete($post->capa);
+        $post->delete();
 
         return redirect()->route('index');
     }

@@ -23,21 +23,8 @@
 
     {{-- LISTAGEM DE POSTS --}}
     <div class="intercalar">
-        <div class="row">
-            <div class="col-md-3 col-5">
-                <div class="containerImgPrincipal ratio ratio-16x9">
-                    <img src=" {{asset('images/imagem.png')}} " alt="Imagem Postagem" class="h-100 w-100 postPrincipal">
-                </div>
-            </div>
-            <div class="col">
-                <div class="h-100 textoPostSecundario d-flex flex-column justify-content-center">
-                    <a class="text-decoration-none link-secondary" href="{{route('post')}}"><h1>Título</h1></a>
-                    <div>Descrição</div>
-                </div>
-            </div>
-        </div>
 
-        <div class="row">
+        {{-- <div class="row">
             <div class="col-md-3 col-5">
                 <div class="containerImgPrincipal ratio ratio-16x9">
                     <img src=" {{asset('images/imagem.png')}} " alt="Imagem Postagem" class="h-100 w-100 postPrincipal">
@@ -49,119 +36,24 @@
                     <div>Descrição</div>
                 </div>
             </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-3 col-5">
-                <div class="containerImgPrincipal ratio ratio-16x9">
-                    <img src=" {{asset('images/imagem.png')}} " alt="Imagem Postagem" class="h-100 w-100 postPrincipal">
-                </div>
-            </div>
-            <div class="col">
-                <div class="h-100 textoPostSecundario d-flex flex-column justify-content-center">
-                    <a class="text-decoration-none link-secondary" href="{{route('post')}}"><h1>Título</h1></a>
-                    <div>Descrição</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-3 col-5">
-                <div class="containerImgPrincipal ratio ratio-16x9">
-                    <img src=" {{asset('images/imagem.png')}} " alt="Imagem Postagem" class="h-100 w-100 postPrincipal">
-                </div>
-            </div>
-            <div class="col">
-                <div class="h-100 textoPostSecundario d-flex flex-column justify-content-center">
-                    <a class="text-decoration-none link-secondary" href="{{route('post')}}"><h1>Título</h1></a>
-                    <div>Descrição</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-3 col-5">
-                <div class="containerImgPrincipal ratio ratio-16x9">
-                    <img src=" {{asset('images/imagem.png')}} " alt="Imagem Postagem" class="h-100 w-100 postPrincipal">
-                </div>
-            </div>
-            <div class="col">
-                <div class="h-100 textoPostSecundario d-flex flex-column justify-content-center">
-                    <a class="text-decoration-none link-secondary" href="{{route('post')}}"><h1>Título</h1></a>
-                    <div>Descrição</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-3 col-5">
-                <div class="containerImgPrincipal ratio ratio-16x9">
-                    <img src=" {{asset('images/imagem.png')}} " alt="Imagem Postagem" class="h-100 w-100 postPrincipal">
-                </div>
-            </div>
-            <div class="col">
-                <div class="h-100 textoPostSecundario d-flex flex-column justify-content-center">
-                    <a class="text-decoration-none link-secondary" href="{{route('post')}}"><h1>Título</h1></a>
-                    <div>Descrição</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-3 col-5">
-                <div class="containerImgPrincipal ratio ratio-16x9">
-                    <img src=" {{asset('images/imagem.png')}} " alt="Imagem Postagem" class="h-100 w-100 postPrincipal">
-                </div>
-            </div>
-            <div class="col">
-                <div class="h-100 textoPostSecundario d-flex flex-column justify-content-center">
-                    <a class="text-decoration-none link-secondary" href="{{route('post')}}"><h1>Título</h1></a>
-                    <div>Descrição</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-3 col-5">
-                <div class="containerImgPrincipal ratio ratio-16x9">
-                    <img src=" {{asset('images/imagem.png')}} " alt="Imagem Postagem" class="h-100 w-100 postPrincipal">
-                </div>
-            </div>
-            <div class="col">
-                <div class="h-100 textoPostSecundario d-flex flex-column justify-content-center">
-                    <a class="text-decoration-none link-secondary" href="{{route('post')}}"><h1>Título</h1></a>
-                    <div>Descrição</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-3 col-5">
-                <div class="containerImgPrincipal ratio ratio-16x9">
-                    <img src=" {{asset('images/imagem.png')}} " alt="Imagem Postagem" class="h-100 w-100 postPrincipal">
-                </div>
-            </div>
-            <div class="col">
-                <div class="h-100 textoPostSecundario d-flex flex-column justify-content-center">
-                    <a class="text-decoration-none link-secondary" href="{{route('post')}}"><h1>Título</h1></a>
-                    <div>Descrição</div>
-                </div>
-            </div>
-        </div>
+        </div> --}}
         
-        <div class="row">
-            <div class="col-md-3 col-5">
-                <div class="containerImgPrincipal ratio ratio-16x9">
-                    <img src=" {{asset('images/imagem.png')}} " alt="Imagem Postagem" class="h-100 w-100 postPrincipal">
+        @foreach($posts as $post)
+            <div class="row">
+                <div class="col-md-3 col-5">
+                    <div class="containerImgPrincipal ratio ratio-16x9">
+                        <img src=" {{asset('capas/'.$post->capa)}} " alt="Imagem Postagem" class="h-100 w-100 postPrincipal">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="h-100 textoPostSecundario d-flex flex-column justify-content-center">
+                        <a class="text-decoration-none link-secondary" href="{{route('posts.post', $post)}}"><h1>{{$post->titulo}}</h1></a>
+                        <div>{{$post->subtitulo}}</div>
+                    </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="h-100 textoPostSecundario d-flex flex-column justify-content-center">
-                    <a class="text-decoration-none link-secondary" href="{{route('post')}}"><h1>Título</h1></a>
-                    <div>Descrição</div>
-                </div>
-            </div>
-        </div>
+        @endforeach
+
     </div>
 
     {{-- PAGINAÇÃO --}}
