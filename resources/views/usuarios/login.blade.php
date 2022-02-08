@@ -14,13 +14,14 @@
             <div class="form border border-2 py-4 px-sm-4 px-1 rounded-3">
                 <h1 class="mb-3">Fazer Login</h1>
                 <form action="#" method="POST">
+                    @csrf
                     <div class="mb-3">
-                        <label for="usuario" class="form-label">Usuário:</label>
-                        <input type="text" name="usuario" id="usuario" class="form-control">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" name="email" id="email" class="form-control">
                     </div>
                     <div class="mb-3">
-                        <label for="senha" class="form-label">Senha:</label>
-                        <input type="password" name="senha" id="senha" class="form-control">
+                        <label for="password" class="form-label">Senha:</label>
+                        <input type="password" name="password" id="password" class="form-control">
                         <a href="#" class="form-text">Recuperar Senha</a>
                     </div>
                     <div class="d-flex flex-row justify-content-around flex-wrap">

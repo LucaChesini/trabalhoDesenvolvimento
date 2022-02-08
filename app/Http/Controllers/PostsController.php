@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comentario;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -21,8 +24,26 @@ class PostsController extends Controller
         return view('posts.posts', ['posts' => $posts]);
     }
 
-    public function show(Post $post){
-        return view('posts.post', ['post' => $post]);
+    public function show(Post $post, Request $form){
+        if($form->isMethod('post')){
+            $comentario = new Comentario();
+
+            $comentario->id_usuario = Auth::user()->id;
+            $comentario->id_post = $post->id;
+            $comentario->conteudo = $form->comentario;
+
+            $comentario->save();
+        }
+
+        $comentarios = DB::table('comentarios')
+                            ->join('posts', 'comentarios.id_post' , '=', 'posts.id')
+                            ->join('usuarios', 'comentarios.id_usuario' , '=', 'usuarios.id')
+                            ->select('usuarios.name', 'usuarios.imagem', 'comentarios.id', 'comentarios.id_usuario', 'comentarios.conteudo')
+                            ->where('id_post', '=', $post->id)
+                            ->orderBy('comentarios.id', 'desc')
+                            ->get();
+
+        return view('posts.post', ['post' => $post, 'comentarios' => $comentarios]);
     }
 
     public function create(){

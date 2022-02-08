@@ -14,6 +14,7 @@
             <div class="form border border-2 py-4 px-sm-4 px-1 rounded-3">
                 <h1 class="mb-3">Fazer Cadastro</h1>
                 <form action="#" method="POST" enctype="multipart/form-data">
+                    @csrf
                     <label for="email" class="form-label">Email:</label>
                     <input type="email" name="email" id="email" class="form-control mb-3">
                     <label for="usuario" class="form-label">Usuário:</label>

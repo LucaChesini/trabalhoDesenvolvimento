@@ -2,6 +2,7 @@
 /public/hot
 /public/storage
 /public/capas
+/public/perfil
 /storage/*.key
 /vendor
 .env

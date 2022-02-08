@@ -49,6 +49,13 @@ return [
             'visibility' => 'public',
         ],
 
+        'perfil' => [
+            'driver' => 'local',
+            'root' => storage_path('perfil'),
+            'url' => env('APP_URL').'/perfil',
+            'visibility' => 'public',
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),
@@ -76,6 +83,7 @@ return [
     'links' => [
         public_path('storage') => storage_path('app/public'),
         public_path('capas') => storage_path('capas'),
+        public_path('perfil') => storage_path('perfil'),
     ],
 
 ];

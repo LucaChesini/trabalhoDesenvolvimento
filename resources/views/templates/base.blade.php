@@ -34,33 +34,37 @@
                         </li>
 
                         {{-- Só para administradores --}}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('listaContas')}}">Lista</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-info" href="{{route('posts.inserir')}}">Criar Post</a>
-                        </li>
+                        @if(Auth::user() && Auth::user()->cargo == 1)
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('usuarios.lista')}}">Lista</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-info" href="{{route('posts.inserir')}}">Criar Post</a>
+                            </li>
+                        @endif
                     </ul>
 
-                    {{-- Apenas quando o usuário estiver logado --}}
-                    <div class="d-flex flex-lg-row flex-column align-items-lg-center align-items-start gap-2">
-                        <a class="text-secondary text-decoration-none" href="{{route('conversas.lista')}}">Conversas</a>
-                        <a class="text-secondary text-decoration-none" href="{{route('perfil')}}">Perfil</a>
-                        <a class="text-danger text-decoration-none" href="#">Sair</a>
-                        <div class="vr d-lg-block d-none"></div>
-                        <div class="d-flex flex-lg-row flex-row-reverse align-items-center gap-2">
-                            <div>Nome</div>
-                            <div class="containerPerfilNavbar ratio ratio-1x1">
-                                <img src=" {{asset('images/perfil.png')}} " alt="Perfil" class="rounded-circle border border-1 border-dark">
+                    @if(Auth::user())
+                        {{-- Apenas quando o usuário estiver logado --}}
+                        <div class="d-flex flex-lg-row flex-column align-items-lg-center align-items-start gap-2">
+                            <a class="text-secondary text-decoration-none" href="{{route('conversas.lista')}}">Conversas</a>
+                            <a class="text-secondary text-decoration-none" href="{{route('perfil', Auth::user())}}">Perfil</a>
+                            <a class="text-danger text-decoration-none" href="{{route('usuarios.logout')}}">Sair</a>
+                            <div class="vr d-lg-block d-none"></div>
+                            <div class="d-flex flex-lg-row flex-row-reverse align-items-center gap-2">
+                                <div>{{Auth::user()->name}}</div>
+                                <div class="containerPerfilNavbar ratio ratio-1x1">
+                                    <img src=" {{asset('perfil/'.Auth::user()->imagem)}} " alt="Perfil" class="rounded-circle border border-1 border-dark">
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    {{-- Apenas quando o usuário não estiver logado --}}
-                    <div>
-                        <a role="button" href=" {{route('cadastro')}} " class="btn btn-primary">Cadastrar</a>
-                        <a role="button" href=" {{route('login')}} " class="btn btn-success">Fazer Login</a>
-                    </div>
+                    @else
+                        {{-- Apenas quando o usuário não estiver logado --}}
+                        <div>
+                            <a role="button" href=" {{route('usuarios.inserir')}} " class="btn btn-primary">Cadastrar</a>
+                            <a role="button" href=" {{route('usuarios.login')}} " class="btn btn-success">Fazer Login</a>
+                        </div>
+                    @endif
                 </div>
             </div>
         </nav>
