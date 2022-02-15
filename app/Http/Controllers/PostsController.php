@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Comentario;
+use App\Models\Curtidas_posts;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -43,7 +44,9 @@ class PostsController extends Controller
                             ->orderBy('comentarios.id', 'desc')
                             ->get();
 
-        return view('posts.post', ['post' => $post, 'comentarios' => $comentarios]);
+        $curtidas = DB::table('curtidas_posts')->where('id_post', '=', $post->id)->count();
+
+        return view('posts.post', ['post' => $post, 'comentarios' => $comentarios, 'curtidas' => $curtidas]);
     }
 
     public function create(){
@@ -101,5 +104,20 @@ class PostsController extends Controller
         $post->delete();
 
         return redirect()->route('index');
+    }
+
+    public function curtir(Post $post){
+        $curtida = new Curtidas_posts();
+
+        $curtida->id_post = $post->id;
+        $curtida->id_usuario = Auth::user()->id;
+
+        $curtida->save();
+
+        $query = DB::table('curtidas_posts')->where('id_post', '=', $post->id)->count();
+
+        echo(json_encode($query));
+
+        return;
     }
 }

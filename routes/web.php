@@ -36,6 +36,8 @@ Route::get('/posts/{post}/deletar', [PostsController::class, 'delete'])->name('p
 
 Route::post('/posts/{post}/deletar', [PostsController::class, 'remove'])->name('posts.remove');
 
+Route::post('/posts/{post}/curtir', [PostsController::class, 'curtir'])->name('posts.curtir');
+
 Route::get('/comentarios/{comentario}/deletar', [ComentariosController::class, 'delete'])->name('comentarios.delete');
 
 Route::post('/comentarios/{comentario}/deletar', [ComentariosController::class, 'remove'])->name('comentarios.remove');

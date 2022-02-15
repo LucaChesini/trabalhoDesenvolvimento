@@ -1,5 +1,30 @@
 @extends('templates.base')
 @section('titulo', 'Post')
+@push('meta')
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+@endpush
+@push('scripts')
+    <script>
+        $(function(){
+            $('#curtir').click(function(){
+                
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+
+                $.ajax({
+                    url: "{{route('posts.curtir', $post)}}",
+                    type: "POST",
+                    success: function(response){
+                        $('#quantidade').html(response)
+                    }
+                })
+            })
+        })
+    </script>
+@endpush
 
 @section('corpo')
 
@@ -75,7 +100,7 @@
     <div class="row">
         <div class="col-1"></div>
         <div class="col">
-            <button type="submit" id="curtir" name="curtir" class="btn"><i class="bi bi-hand-thumbs-up"></i><span>100</span></button>
+            <button type="submit" id="curtir" name="curtir" class="btn" @if(!Auth::user()) disabled @endif><i class="bi bi-hand-thumbs-up"></i><span id="quantidade">{{$curtidas}}</span></button>
         </div>
         <div class="col-1"></div>
     </div>
