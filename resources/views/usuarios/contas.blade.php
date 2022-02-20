@@ -44,7 +44,7 @@
                             <div class="my-0 ms-3">{{$usuario->name}}</div>
                         </div>
                         <div class="d-flex flex-row justify-content-start align-items-center">
-                            <a role="button" href="#" class="btn btn-danger">Apagar</a>
+                            <a role="button" href="{{route('usuarios.delete', $usuario)}}" class="btn btn-danger">Apagar</a>
                         </div>
                     </div>
                 </div>

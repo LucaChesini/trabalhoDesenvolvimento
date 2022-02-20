@@ -57,7 +57,7 @@
     </div>
 
     {{-- PAGINAÇÃO --}}
-    <div class="row">
+    {{-- <div class="row">
         <div class="col">
             <div class="d-flex flex-row justify-content-center">
                 <ul class="pagination">
@@ -78,6 +78,12 @@
                     </li>
                 </ul>
             </div>
+        </div>
+    </div> --}}
+
+    <div class="row">
+        <div class="col">
+            {{ $posts->links() }}
         </div>
     </div>
 

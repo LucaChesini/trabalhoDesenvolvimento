@@ -116,23 +116,47 @@
     {{-- POSTS À MOSTRA --}}
     <div class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-3 col-6">
-            <div class="containerImgPrincipal ratio ratio-16x9">
-                <img src=" {{asset('images/imagem.png')}} " alt="Imagem Postagem" class="h-100 w-100 postPrincipal">
+        @if(isset($outrosPosts[0]))
+            <div class="col-md-3 col-6">
+                <div class="containerImgPrincipal ratio ratio-16x9">
+                    <a class="text-decoration-none link-secondary" href="{{route('posts.post', $outrosPosts[0])}}">
+                        <img src=" {{asset('capas/'.$outrosPosts[0]->capa)}} " alt="Imagem Postagem" class="h-100 w-100 postPrincipal">
+                    </a>
+                </div>
+                <div class="textoPostPrincipal">
+                    <a class="text-decoration-none link-secondary" href="{{route('posts.post', $outrosPosts[0])}}">
+                        <h1>{{$outrosPosts[0]->titulo}}</h1>
+                    </a>
+                </div>
             </div>
-            <div class="textoPostPrincipal">
-                <h1>Título</h1>
-            </div>
-        </div>
+        @endif
+
         <div class="col-md-2 d-md-block d-none"></div>
-        <div class="col-md-3 col-6">
-            <div class="containerImgPrincipal ratio ratio-16x9">
-                <img src=" {{asset('images/teste.png')}} " alt="Imagem Postagem" class="h-100 w-100 postPrincipal">
+
+        @if(isset($outrosPosts[1]))
+            <div class="col-md-3 col-6">
+                <div class="containerImgPrincipal ratio ratio-16x9">
+                    <a class="text-decoration-none link-secondary" href="{{route('posts.post', $outrosPosts[1])}}">
+                        <img src=" {{asset('capas/'.$outrosPosts[1]->capa)}} " alt="Imagem Postagem" class="h-100 w-100 postPrincipal">
+                    </a>
+                </div>
+                <div class="textoPostPrincipal">
+                    <a class="text-decoration-none link-secondary" href="{{route('posts.post', $outrosPosts[1])}}">
+                        <h1>{{$outrosPosts[1]->titulo}}</h1>
+                    </a>
+                </div>
             </div>
-            <div class="textoPostPrincipal">
-                <h1>Título</h1>
-            </div>
-        </div>
+        @endif
+
+            {{-- <div class="col-md-3 col-6">
+                <div class="containerImgPrincipal ratio ratio-16x9">
+                    <img src=" {{asset('images/teste.png')}} " alt="Imagem Postagem" class="h-100 w-100 postPrincipal">
+                </div>
+                <div class="textoPostPrincipal">
+                    <h1>Título</h1>
+                </div>
+            </div> --}}
+
         <div class="col-md-2"></div>
     </div>
 
@@ -146,7 +170,7 @@
 
     {{-- ESCREVER COMENTÁRIO --}}
     @if(Auth::user())
-        
+    {{-- Só permite usuários logados comentar --}}
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col">
@@ -216,13 +240,11 @@
                             <div class="my-0 ms-3">{{$comentario->name}}</div>
                         </div>
                         <div>
-                            <div class="mb-0 mt-3 ms-5">
+                            <div class="mb-3 mt-3 ms-5">
                                 <p>{!! $comentario->conteudo !!}</p>
                             </div>
                         </div>
-                        <div>
-                            <button type="submit" id="curtir" name="curtir" class="btn"><i class="bi bi-hand-thumbs-up"></i><span>100</span></button>
-                        </div>
+                        {{-- Verifica se o comentário foi feito pelo usuário logado ou se o usuário logado é um administrador --}}
                         @if((Auth::user() && Auth::user()->id == $comentario->id_usuario) || (Auth::user() && Auth::user()->cargo == 1))
                             <div>
                                 <a role="button" class="btn btn-danger" href="{{route('comentarios.delete', $comentario->id)}}">Apagar</a>

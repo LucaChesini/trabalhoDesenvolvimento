@@ -12,8 +12,9 @@
     <body>
         <div class="containerForm h-100 d-flex justify-content-center align-items-center">
             <div class="form border border-2 py-4 px-sm-4 px-1 rounded-3">
-                <h1 class="mb-3">Editar Perfil</h1>
-                <form action="#" method="POST" enctype="multipart/form-data">
+                <h1 class="mb-3">Fazer Cadastro</h1>
+                <form action="{{route('usuarios.primeiro')}}" method="POST" enctype="multipart/form-data">
+                    @csrf
                     <label for="email" class="form-label">Email:</label>
                     <input type="email" name="email" id="email" class="form-control mb-3">
                     <label for="usuario" class="form-label">Usuário:</label>
@@ -24,13 +25,13 @@
                     <input type="password" name="senhaConfirm" id="senhaConfirm" class="form-control mb-3">
                     <label for="imgPerfil" class="form-label">Imagem de Perfil:</label>
                     <input type="file" name="imgPerfil" id="imgPerfil" class="form-control mb-3">
-                    <div class="form-check form-switch mb-3">
+                    <div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox" role="switch" id="notificacoes" name="notificacoes">
-                        <label class="form-check-label" for="notificacoes">Receber notificações?</label>
+                        <label class="form-check-label" for="notificacoes">Ativar Notificações?</label>
                     </div>
-                    <div class="d-flex flex-row justify-content-around flex-wrap">
+                    <div class="d-flex flex-row justify-content-around flex-wrap mt-2">
                         <button type="submit" class="btn btn-success mx-auto">Enviar</button>
-                        <a href="{{route('perfil')}}" role="button" class="btn btn-danger mx-auto">Voltar</a>
+                        <a href="{{route('index')}}" role="button" class="btn btn-danger mx-auto">Voltar</a>
                     </div>
                 </form>
             </div>
